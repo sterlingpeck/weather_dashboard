@@ -1,5 +1,6 @@
 var DateTime = luxon.DateTime;
 var today = DateTime.now();
+var savedSearches = [];
 
 function getCityWeath(cityName) {
   fetch(
@@ -66,3 +67,13 @@ function getCityWeath(cityName) {
       $("#error-modal").addClass("is-active");
     });
 }
+
+// Search
+$("#form").click(function (event) {
+  event.preventDefault();
+  var userSearch = $("#user-input").val();
+  $("#user-input").val("");
+  getCityWeath(userSearch);
+  $("#weather-details").removeClass("is-hidden");
+  $("#result").removeClass("is-hidden");
+});
