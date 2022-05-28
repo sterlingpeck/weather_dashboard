@@ -2,6 +2,10 @@
 
 https://github.com/sterlingpeck/Weather Dashboard
 
+# Screenshot
+
+![Screenshot](./assets/images/Weather%20Dashboard.png)
+
 # Description
 
 Allows user to find weather and 5 day forecast in any city.
