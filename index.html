@@ -5,6 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
-  <body></body>
+  <body class="container is-max-desktop">
+    <div class="columns is-centered is-vcentered mt-5 has-text-centered">
+      <div class="column">
+        <h1 class="is-size-1">Check the Forecast in any city:</h1>
+      </div>
+    </div>
+    <form class="field has-addons mb-5" id="search-form">
+      <div class="control is-expanded">
+        <input
+          class="input is-primary is-medium"
+          id="user-input"
+          type="text"
+          placeholder="Enter a city"
+        />
+      </div>
+      <div class="control">
+        <button
+          class="button is-primary is-medium"
+          id="form-submit"
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+    </form>
+
+    <section class="box is-hidden" id="weather-details">
+      <div class="columns is-centered m-5">
+        <div class="column is-4 has-text-centered">
+          <p class="title" id="city"></p>
+          <p class="subtitle" id="date"></p>
+          <span id="current-icon"></span>
+        </div>
+        <div class="column is-8 columns is-multiline m-5 has-text-centered">
+          <span class="column is-half" id="current-temp"></span>
+          <span class="column is-half" id="current-wind"></span>
+          <span class="column is-half" id="current-humidity"></span>
+          <span class="column is-half"
+            >UV Index:
+            <span class="tag is-medium is-light" id="current-uv"></span
+          ></span>
+        </div>
+      </div>
+
+      <div class="message is-primary">
+        <p class="message-header is-size-4">Five-Day Forecast</p>
+        <div class="message-body">
+          <div class="columns has-text-centered">
+            <div class="column is-4 is-size-6" id="date-1"></div>
+            <div class="column is-1 is-size-6" id="icon-1"></div>
+            <div class="column is-2 is-size-6" id="temp-1"></div>
+            <div class="column is-2 is-size-6" id="wind-1"></div>
+            <div class="column is-2 is-size-6" id="humidity-1"></div>
+          </div>
+          <hr class="is-rounded" />
+          <div class="columns has-text-centered">
+            <div class="column is-4 is-size-6" id="date-2"></div>
+            <div class="column is-1 is-size-6" id="icon-2"></div>
+            <div class="column is-2 is-size-6" id="temp-2"></div>
+            <div class="column is-2 is-size-6" id="wind-2"></div>
+            <div class="column is-2 is-size-6" id="humidity-2"></div>
+          </div>
+          <hr class="is-rounded" />
+          <div class="columns has-text-centered">
+            <div class="column is-4 is-size-6" id="date-3"></div>
+            <div class="column is-1 is-size-6" id="icon-3"></div>
+            <div class="column is-2 is-size-6" id="temp-3"></div>
+            <div class="column is-2 is-size-6" id="wind-3"></div>
+            <div class="column is-2 is-size-6" id="humidity-3"></div>
+          </div>
+          <hr class="is-rounded" />
+          <div class="columns has-text-centered">
+            <div class="column is-4 is-size-6" id="date-4"></div>
+            <div class="column is-1 is-size-6" id="icon-4"></div>
+            <div class="column is-2 is-size-6" id="temp-4"></div>
+            <div class="column is-2 is-size-6" id="wind-4"></div>
+            <div class="column is-2 is-size-6" id="humidity-4"></div>
+          </div>
+          <hr class="is-rounded" />
+          <div class="columns has-text-centered">
+            <div class="column is-4 is-size-6" id="date-5"></div>
+            <div class="column is-1 is-size-6" id="icon-5"></div>
+            <div class="column is-2 is-size-6" id="temp-5"></div>
+            <div class="column is-2 is-size-6" id="wind-5"></div>
+            <div class="column is-2 is-size-6" id="humidity-5"></div>
+          </div>
+        </div>
+      </div>
+  </body>
 </html>
