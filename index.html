@@ -26,11 +26,7 @@
         />
       </div>
       <div class="control">
-        <button
-          class="button is-primary is-medium"
-          id="form"
-          type="submit"
-        >
+        <button class="button is-primary is-medium" id="form" type="submit">
           Search
         </button>
       </div>
@@ -98,6 +94,44 @@
           </div>
         </div>
       </div>
+
+      <h2 class="column is-full is-size-3 has-text-centered">
+        Recent Searches:
+      </h2>
+      <div
+        class="p-5 is-flex is-flex-wrap-wrap is-justify-content-space-around"
+        id="recent-searches"
+      >
+        <button
+          class="button is-danger is-light is-flex m-2 recent-search-button is-hidden"
+          id="recent-search-0"
+        ></button>
+        <button
+          class="button is-danger is-light is-flex m-2 recent-search-button is-hidden"
+          id="recent-search-1"
+        ></button>
+        <button
+          class="button is-danger is-light is-flex m-2 recent-search-button is-hidden"
+          id="recent-search-2"
+        ></button>
+        <button
+          class="button is-danger is-light is-flex m-2 recent-search-button is-hidden"
+          id="recent-search-3"
+        ></button>
+        <button
+          class="button is-danger is-light is-flex m-2 recent-search-button is-hidden"
+          id="recent-search-4"
+        ></button>
+      </div>
+    </section>
+
+    <div class="modal" id="error-modal">
+      <div class="modal-background"></div>
+      <div class="modal-content box">
+        <p class="title has-text-centered">You have to type a city name!</p>
+      </div>
+      <button class="modal-close is-large"></button>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>

@@ -77,3 +77,35 @@ $("#form").click(function (event) {
   $("#weather-details").removeClass("is-hidden");
   $("#result").removeClass("is-hidden");
 });
+
+// Save search
+function saveSearch(city) {
+  savedSearches.push(city);
+  if (savedSearches.length > 5) {
+    savedSearches.shift();
+  }
+  localStorage.setItem("searchHistory", JSON.stringify(savedSearches));
+}
+
+// Load search
+function loadSearches() {
+  savedSearches = JSON.parse(localStorage.getItem("searchHistory"));
+  if (!savedSearches) {
+    savedSearches = [];
+  }
+  if (savedSearches.length == 0) {
+    return;
+  } else {
+    for (let i = 0; i < savedSearches.length; i++) {
+      $("#recent-search-" + i).text(savedSearches[i]);
+      $("#recent-search-" + i).removeClass("is-hidden");
+    }
+  }
+}
+
+// User clicks a recent search
+$($("#recent-searches")).on("click", ".recent-search-button", function () {
+  getCityWeath($(this).text());
+});
+
+loadSearches();
