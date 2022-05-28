@@ -1,6 +1,6 @@
 # Weather Dashboard
 
-https://github.com/sterlingpeck/Weather Dashboard
+https://github.com/sterlingpeck/Weather_Dashboard
 
 # Screenshot
 
